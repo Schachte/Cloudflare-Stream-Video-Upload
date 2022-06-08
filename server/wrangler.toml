@@ -1,0 +1,17 @@
+name = "cloudflare-streams-tus-upload"
+account_id = "a67e14daa5f8dceeb91fe5449ba496eb"
+type = "webpack"
+zone_id = ""
+route = ""
+workers_dev = true
+compatibility_date = "2022-06-06"
+webpack_config = "webpack.config.js"
+
+# [secrets]
+# ACCOUNT_ID_DEMO
+# TOKEN_DEMO
+
+[build]
+command = "npm install && npm run build"
+[build.upload]
+format = "service-worker"

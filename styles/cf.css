@@ -1,0 +1,19 @@
+#progress-bar-container {
+    display: flex;
+    margin-top: 20px;
+    width: 100%;
+    height: 50px;
+    border: 1px solid gray;
+    display: none;
+}
+
+#progress-bar-fill {
+    height: 100%;
+    width: 0%;
+    transition: 1s ease-in-out all;
+    background-color: #f63;
+}
+
+#upload {
+    width: 100%;
+}

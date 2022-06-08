@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <title>Cloudflare TUS Uploader</title>
+
+    <!-- External Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/tus-js-client@latest/dist/tus.min.js"></script>
+    <script src="./scripts/tusUpload.js"></script>
+
+    <!-- Optional Styles -->
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css" />
+    <link rel="stylesheet" href="./styles/cf.css" />
+  </head>
+
+  <body>
+    <center>
+      <h1>Cloudflare Stream Tus Uploader</h1>
+      <div class="container">
+        <form>
+          <div class="form-group">
+            <label for="file">Select Video You Want To Upload</label>
+            <input type="file" id="file" />
+          </div>
+          <button type="submit" id="upload">Upload Video With Tus</button>
+          <div id="progress-bar-container">
+            <div id="progress-bar-fill"></div>
+          </div>
+          <span id="progress-bar-percent"></span>
+        </form>
+      </div>
+    </center>
+
+    <script>
+      const upload = document.getElementById("upload");
+      upload.addEventListener("click", (e) => {
+        e.preventDefault();
+        const selectFile = document.getElementById("file");
+        startUpload(
+          selectFile.files[0],
+          5 * 1024 * 1024,
+          "https://my-ts-project.tumai.workers.dev/upload"
+        );
+      });
+    </script>
+  </body>
+</html>
