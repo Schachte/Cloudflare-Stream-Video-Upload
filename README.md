@@ -13,7 +13,7 @@ From Cloudflare
 
 Historically it stood for Transloadit Upload Server, later repurposed to The Upload Server. `tus` provides a universal spec for _how_ resumable uploads and large file uploads should work. `tus` is built on top of HTTP/HTTPS, making it widely available on most platforms we use today.  
 
-Does is great if you:
+tus is great if you:
 - Need to handle large file uploads
 - Have users with potentially unreliable network connections
 - Want to provide pause and resume capabilities to your users
