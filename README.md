@@ -54,7 +54,7 @@ wrangler secret put TOKEN_DEMO
 Deployment to the world-wide-web is simple.
 
 1. `cd server && npm i`
-2. `wrangler publish`
+2. `wrangler deploy`
 
 ## Running The Client
 
